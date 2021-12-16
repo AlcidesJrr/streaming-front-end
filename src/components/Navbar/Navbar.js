@@ -34,15 +34,15 @@ const Navbar = () => {
                     </li>        
                 </ul>
             </div>
-            <div className='navbar__right'>
+            <div className='navbar__left'>
                 <ul className='navbar__left__links'>
-                    <li className='navbar__left__links__intes'>
+                    <li className='navbar__left__links__itens'>
                         <a>
-                            <Link className='navbar__right__links__icons'
+                            <Link className='navbar__left__links__icons'
                             title='Perfil'
                             to='/perfil'
                             >
-                                <CgProfile size={35} color={'white'} />
+                                <CgProfile className='teste' size={35} style={{background: '#212529' }}  />
                             </Link>
                         </a>
                     </li>
