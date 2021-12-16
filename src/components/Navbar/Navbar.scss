@@ -34,6 +34,11 @@
                 font-size: 1em;
                 font-weight: 800;
             }
+
+            &__text:hover {
+                color: #adb5bd;
+                transition: color .4s; 
+            }
         }
     }
 
@@ -48,6 +53,12 @@
             color: white;
             background-color: #212529;
             }
+
+            &__icons:hover {
+                color: #adb5bd;
+                transition: color .4s;
+            }
         }
     }
+        
 }
