@@ -42,11 +42,11 @@ const Navbar = () => {
                             title='Perfil'
                             to='/perfil'
                             >
-                                <CgProfile size={35} style={{background: '#212529' }} />
+                                <CgProfile size={35} />
                             </Link>
                         </a>
                     </li>
-                </ul> 
+                </ul>
             </div>   
         </div>
     );
