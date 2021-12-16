@@ -11,13 +11,12 @@ import Navbar from './components/Navbar/Navbar';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Navbar>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/filme" element={<Filme />} />   
         </Routes>
-      </Navbar>  
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
