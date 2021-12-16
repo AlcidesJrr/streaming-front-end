@@ -9,9 +9,11 @@ const Card = (props) => {
     }
 
     return (
-        <div className='card' onClick={goFilme}>
-            <img src={props.img} alt={props.name} />
-            <span>{props.name}</span>
+        <div className='container'>
+            <div className='card' onClick={goFilme}>
+                <img src={props.img} alt={props.name} />
+                <span>{props.name}</span>
+            </div>
         </div>
     )
 }
