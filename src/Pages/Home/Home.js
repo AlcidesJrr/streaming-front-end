@@ -4,8 +4,10 @@ import './Home.scss';
 
 const Home = () => {
     return (
-        <div ClassName='home'>
-            <h1 ClassName='home__text'>Mais vale a liberdade e o bem que ela ti faz liberdade é tudo aquilo liberdade é muito mais.</h1>
+        <div className='home'>
+            <div className='home__text'>
+                <h1>Mais vale a liberdade e o bem que ela ti faz liberdade é tudo aquilo liberdade é muito mais.</h1>
+            </div>
         </div>
     )
 }

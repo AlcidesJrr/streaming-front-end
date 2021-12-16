@@ -42,7 +42,7 @@ const Navbar = () => {
                             title='Perfil'
                             to='/perfil'
                             >
-                                <CgProfile className='teste' size={35} style={{background: '#212529' }}  />
+                                <CgProfile size={35} style={{background: '#212529' }} />
                             </Link>
                         </a>
                     </li>
