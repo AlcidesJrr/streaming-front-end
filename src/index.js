@@ -5,16 +5,16 @@ import './index.css';
 import Home from './Pages/Home/Home';
 import Filme from './Pages/Filme/Filme';
 import Login from './Pages/Login/Login';
-import Navbar from './components/Navbar/Navbar';
+import Browse from './Pages/Browse/Browse';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/browse" element={<Browse />} />
           <Route path="/filme" element={<Filme />} />   
         </Routes>
     </BrowserRouter>
