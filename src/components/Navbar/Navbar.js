@@ -7,12 +7,12 @@ import { CgProfile } from 'react-icons/cg';
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <div className='navbar__right'>
-                <img className='navbar__right__logo' src={ logo }  title= 'Tele Filmes' alt='Logo tipo Tele Filmes' />
-                <ul className='navbar__right__links'>    
-                    <li className='navbar__right__links__itens'>
+            <div className='navbar__left'>
+                <img className='navbar__left__logo' src={ logo }  title= 'Tele Filmes' alt='Logo tipo Tele Filmes' />
+                <ul className='navbar__left__links'>    
+                    <li className='navbar__left__links__itens'>
                         <Link 
-                            className='navbar__right__links__text'
+                            className='navbar__left__links__text'
                             title="Início"
                             style={{fontSize:'1.1em'}}
                             to= "/"
@@ -20,9 +20,9 @@ const Navbar = () => {
                             Inicio
                         </Link>
                     </li>
-                    <li className='navbar__right__links__itens'>
+                    <li className='navbar__left__links__itens'>
                         <Link 
-                            className='navbar__right__links__text'
+                            className='navbar__left__links__text'
                             title="Filme"
                             to= "/filmes"
                         >
@@ -31,10 +31,10 @@ const Navbar = () => {
                     </li>        
                 </ul>
             </div>
-            <div className='navbar__left'>
-                <ul className='navbar__left__links'>
-                    <li className='navbar__left__links__itens'>
-                        <Link className='navbar__left__links__icons'
+            <div className='navbar__right'>
+                <ul className='navbar__right__links'>
+                    <li className='navbar__right__links__itens'>
+                        <Link className='navbar__right__links__icons'
                             title='Perfil'
                             to='/perfil'
                         >
