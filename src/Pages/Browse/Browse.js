@@ -1,39 +1,45 @@
-import Navbar from '../../components/Navbar/Navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
 import './Browse.scss';
+import Navbar from '../../components/Navbar/Navbar';
+import Frame from '../../components/Frame/Frame';
+import Card from '../../components/Card/Card';
+import axios from 'axios';
 
 const Browse = () => {
-    return (
-        <div className='browse'>
-            <Navbar />
-            <div className='browse__background'>
-                <Carousel>
-                <Carousel.Item>
-                    <img
-                    className="browse__carousel d-block w-100"
-                    src="https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_SH_FastandFurious/2c00960a-b26e-4344-a17c-624bf7d112d1._UR3000,600_SX1500_FMwebp_.jpeg"
-                    alt="First slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="browse__carousel d-block w-100"
-                    src="https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_WORE_Control/115317d6-2cf1-48bc-a2ee-ba638f5174a3._UR3000,600_SX1500_FMwebp_.jpeg" 
-                    alt="Second slide"
-                    />
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="browse__carousel d-block w-100"
-                    src="https://m.media-amazon.com/images/S/sonata-images-prod/SVOD_ROW_WerewolvesWithin/b662f12d-c63f-4ac0-ab54-25b46339f12b._UR3000,600_SX1500_FMwebp_.jpeg"
-                    alt="Third slide"
-                    />
-                </Carousel.Item>
-                </Carousel>
-            </div>
-        </div>
-    )
-}
+  const [filmes, setFilmes] = useState([]);
+  const [montado, setMontado] = useState(false);
 
-export default Browse
+  const getFilmes = async () => {
+    await axios.get('/plant/findMany').then((response) => {
+      if (montado) {
+        setFilmes(response.data);
+      }
+    });
+  };
+
+  useEffect(() => {
+    setMontado(true);
+    getFilmes();
+  }, [montado]);
+
+  return (
+    <div className="browse">
+      <Navbar />
+      <Frame />
+      <div className="browse__background">
+        <div className="browse__card">
+          {filmes.map((item) => (
+            <Card
+              id={item.id}
+              image={item.imageUrl}
+              name={item.commonName}
+              key={item.id}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Browse;

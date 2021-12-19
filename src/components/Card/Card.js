@@ -1,18 +1,17 @@
 import './Card.scss';
-import { UseNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 const Card = (props) => {
-    const navigate = UseNavigate();
+    const navigate = useNavigate();
 
     const goFilme = () => {
-        navigate('/filme', { state: props.id })
+        navigate(`/filme/${props.id}`)
     }
 
     return (
-        <div className='container'>
-            <div className='card' onClick={goFilme}>
-                <img src={props.img} alt={props.name} />
-                <span>{props.name}</span>
+        <div className='card' onClick={goFilme}>
+            <div onClick={goFilme}>
+                <img src={props.image} alt={props.name} />
             </div>
         </div>
     )

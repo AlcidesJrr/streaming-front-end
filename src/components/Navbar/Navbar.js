@@ -15,7 +15,7 @@ const Navbar = () => {
                             className='navbar__left__links__text'
                             title="Início"
                             style={{fontSize:'1.1em'}}
-                            to= "/"
+                            to= "/browse"
                         >
                             Inicio
                         </Link>
@@ -23,10 +23,10 @@ const Navbar = () => {
                     <li className='navbar__left__links__itens'>
                         <Link 
                             className='navbar__left__links__text'
-                            title="Filme"
+                            title="Filmes"
                             to= "/filmes"
                         >
-                            Filmes
+                            Minha lista
                         </Link>
                     </li>        
                 </ul>

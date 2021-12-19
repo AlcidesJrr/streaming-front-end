@@ -2,8 +2,17 @@
  
   &__background {
     width: 100vw;
-    height:100vh;
+    height:auto;
     background-color: #110e0e;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 4rem;
+    flex-wrap: wrap;
+
   }
 }
 
