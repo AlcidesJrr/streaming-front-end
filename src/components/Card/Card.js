@@ -11,7 +11,7 @@ const Card = (props) => {
     return (
         <div className='card' onClick={goFilme}>
             <div onClick={goFilme}>
-                <img src={props.image} alt={props.name} />
+                <img src={props.cover} alt={props.title} />
             </div>
         </div>
     )

@@ -53,7 +53,7 @@ const Login = () => {
               name="email"
               placeholder="Email"
               required
-              onChange={(event) => setEmail(event.target.value)}
+              onChange={(event) => setEmail(event.target.value.toUpperCase())}
             />
             <input
               type="password"

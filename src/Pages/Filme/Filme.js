@@ -12,10 +12,19 @@ const Filme = () => {
 
   const { id } = useParams();
   const getFilmeById = async () => {
-    await axios.get(`plant/findUnique/${id}`).then((response) => {
+    await axios.get(`movie/findUnique/${id}`).then((response) => {
       setFilme(response.data);
     });
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    axios.patch(`/user/addlist${id}`).then((response) => {
+      console.log(id);
+    });
+  };
+
 
   useEffect(() => {
     setFilme(filme);
@@ -27,16 +36,20 @@ const Filme = () => {
       <div className="filme__background">
         <Navbar />
         <div className="filme__card">
-          <img src={filme.imageUrl} alt={filme.commonName} />
+          <img src={filme.cover} alt={filme.title} />
           <div className="filme__header">
-            <h3>{filme.commonName}</h3>
+            <h3>{filme.title}</h3>
             <AiOutlinePlusCircle
               size={40}
               title="Visto"
               className="filme__header__icon"
+              onSubmit={handleSubmit}
             />
           </div>
-          <p>{filme.description}</p>
+          <p className='filme__titulos__resume'>{filme.resume}</p>
+          <p className='filme__titulos'>Ano lançamento: <span className='filme__titulos__'>{filme.year}</span> </p>
+          <p className='filme__titulos'>Gêneros: <span className='filme__titulos__'>{filme.genres}</span></p>
+          <p className='filme__titulos'>Elenco: <span className='filme__titulos__'>{filme.cast}</span></p>
         </div>
       </div>
     </div>

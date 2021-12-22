@@ -23,8 +23,8 @@ const Navbar = () => {
                     <li className='navbar__left__links__itens'>
                         <Link 
                             className='navbar__left__links__text'
-                            title="Filmes"
-                            to= "/filmes"
+                            title="Minha lista"
+                            to= "/mylist"
                         >
                             Minha lista
                         </Link>

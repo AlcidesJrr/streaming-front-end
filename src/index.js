@@ -10,7 +10,7 @@ import Browse from './Pages/Browse/Browse';
 import Perfil from './Pages/Perfil/Perfil';
 import Mylist from './Pages/Mylist/Mylist'
 
-axios.defaults.baseURL = 'https://plants-api-1.herokuapp.com/';
+axios.defaults.baseURL = 'https://streaming-api-1.herokuapp.com';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 ReactDOM.render(

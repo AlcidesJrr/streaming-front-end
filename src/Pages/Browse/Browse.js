@@ -10,7 +10,7 @@ const Browse = () => {
   const [montado, setMontado] = useState(false);
 
   const getFilmes = async () => {
-    await axios.get('/plant/findMany').then((response) => {
+    await axios.get('/movie/findMany').then((response) => {
       if (montado) {
         setFilmes(response.data);
       }
@@ -31,8 +31,8 @@ const Browse = () => {
           {filmes.map((item) => (
             <Card
               id={item.id}
-              image={item.imageUrl}
-              name={item.commonName}
+              cover={item.cover}
+              title={item.title}
               key={item.id}
             />
           ))}

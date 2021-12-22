@@ -1,7 +1,7 @@
 .filme {
     &__background {
         width: 100vw;
-        height:100vh;
+        height:auto;
         background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/3679b63e-5d92-47a1-96ec-b26d86fc0f0a/b15d4f67-d3f3-4210-9cd4-8b02babf6eea/BR-pt-20211213-popsignuptwoweeks-perspective_alpha_website_medium.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -14,29 +14,29 @@
         background-color: rgb(32, 31, 31);
         border: 1px solid rgba(0,0,0,.125);
         border-radius: 0.25rem;
-        width: 40.3em;
-        height: 42rem;
+        width: 30rem;
         margin: auto;
-        margin-top: 2rem;
+        margin-top: 1rem;
         
         p {
             color: white;
             font-size: 1em;
             justify-content: center;
-            padding: 0.3rem 0.7rem;
             word-wrap: break-word;
             padding: 0 1rem;
         }
     
         img {
-            width: 40rem;
-            height: 35rem;
+            object-fit: cover;
+            width: 100%;
             border-radius: 0.25rem;
-            margin: auto;
+            margin: 0;
         }
         
         h3 {
             color: white;
+            font-size: 1.5rem;
+            margin-top: 1rem;
         }
     }
 
@@ -48,8 +48,25 @@
         &__icon {
             color: rgb(139, 136, 136);
             cursor: pointer;
+            margin-top: 1rem;
         }
     }
 
+    .filme__titulos__resume {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .filme__titulos {
+        font-size: 1rem;
+        color:rgb(105, 98, 98);
+        margin: 0;
+    }
+    
+    .filme__titulos__ {
+        font-size: 0.9rem;
+        color: rgb(207, 201, 201);
+    }
     
 }
+
